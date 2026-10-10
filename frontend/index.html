@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medusa Privacy Guardian</title>
+    <meta name="description" content="Visualizer for Screen Privacy Guardian">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Medusa Guardian</h1>
+            <div class="connection-status">
+                <span id="ws-indicator" class="indicator offline"></span>
+                <span id="ws-text">Connecting...</span>
+            </div>
+        </header>
+        
+        <main>
+            <div class="status-card safe" id="status-card">
+                <div class="icon-container">
+                    <div id="shield-icon" class="shield">
+                        <!-- SVG for Shield -->
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 id="status-heading">Offline</h2>
+                <p id="status-desc">Waiting for connection to Guardian Core...</p>
+            </div>
+            
+            <div class="log-container">
+                <h3>Activity Log</h3>
+                <ul id="activity-log">
+                    <li><span class="log-time">[Initialization]</span> System starting...</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
